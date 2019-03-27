@@ -1,5 +1,4 @@
 ﻿# Django-xadmin-centos7项目部署
-
 ##### 大家好，抽点时间跟大家说说我在Django+xadmin项目服务器部署遇到的一些问题以及自己的一点收获，希望初次部署Django的你可以少走点弯路，话不多说，直接切入主题（以下所有的配置都是在root用户下完成）
 #### 第一步：更新系统软件包（二选一）
 ```
@@ -58,7 +57,7 @@ yum -y upgrade	(不变内核和设置,升级包和系统版本)
 ```
  21. cd /home/env
  22. virtualenv --python=/usr/bin/python3 pyweb
- 23. cd /data/env/pyweb/bin
+ 23. cd /home/env/pyweb/bin
  24. source activate
 ```
 #### 第七步：虚拟环境里安装Django和uwsgi（建议django安装1.11.1）
@@ -69,7 +68,7 @@ yum -y upgrade	(不变内核和设置,升级包和系统版本)
 ```
 #### 第八步：切换到网站目录/home/www,将自己的Django项目复制到此目录（建议scp或者rz）
 ```
- 28. cd /data/wwwroot
+ 28. cd /home/www
  29. rz
 ```
 #### 第九步：安装xadmin所需插件（其他所需包根据自己的项目自行安装即可）
